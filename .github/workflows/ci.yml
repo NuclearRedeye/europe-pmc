@@ -19,3 +19,11 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: docker build -t europe-pmc .
+      - run: docker run -d -p 8080:8080 europe-pmc
+      - run: curl -fsS --retry 5 --retry-all-errors --retry-delay 1 http://localhost:8080
