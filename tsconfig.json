@@ -4,6 +4,7 @@
     "module": "nodenext",
     "types": ["node"],
     "noEmit": true,
+    "allowImportingTsExtensions": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
