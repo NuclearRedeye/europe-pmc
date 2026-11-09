@@ -8,11 +8,13 @@
   "scripts": {
     "start": "node src/index.ts",
     "typecheck": "tsc",
-    "dev": "node --watch src/index.ts"
+    "dev": "node --watch src/index.ts",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.6.6",
+    "prettier": "^3.9.10",
     "typescript": "^7.0.2"
   },
   "dependencies": {
