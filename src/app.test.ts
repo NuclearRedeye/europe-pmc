@@ -14,8 +14,8 @@ assert(address !== null && typeof address === "object");
 const baseUrl = `http://127.0.0.1:${address.port}`;
 
 test("returns hello world for any route", async () => {
-  const res = await fetch(`${baseUrl}/`);
+  const response = await fetch(`${baseUrl}/`);
 
-  assert.equal(res.status, 200);
-  assert.equal(await res.text(), "Hello World");
+  assert.equal(response.status, 200);
+  assert.equal(await response.text(), "Hello World");
 });

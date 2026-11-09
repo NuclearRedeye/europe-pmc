@@ -1,12 +1,11 @@
 import type { Express } from "express";
 import express from "express";
+import { createHelloRouter } from "./routes/hello.ts";
 
 export function createApp(): Express {
   const app = express();
 
-  app.use((_req, res) => {
-    res.send("Hello World");
-  });
+  app.use("/", createHelloRouter());
 
   return app;
 }
