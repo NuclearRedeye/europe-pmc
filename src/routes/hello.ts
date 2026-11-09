@@ -1,11 +1,10 @@
 import { Router } from "express";
+import { helloWorld } from "../controllers/hello.ts";
 
 export function createHelloRouter(): Router {
   const router = Router();
 
-  router.use((request, response) => {
-    response.send("Hello World");
-  });
+  router.use(helloWorld);
 
   return router;
 }
