@@ -9,8 +9,10 @@
     "start": "node src/index.ts",
     "typecheck": "tsc",
     "dev": "node --watch src/index.ts",
+    "test": "node --test 'src/**/*.test.ts'",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
